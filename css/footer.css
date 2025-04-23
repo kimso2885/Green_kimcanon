@@ -1,0 +1,160 @@
+.footer{ 
+    /* border: 3px solid darkorchid; */
+    position: relative;
+    background-color: #f1f2f2;
+    top: 150px;
+}
+.footer nav{ 
+    width: 100%;
+    position: relative;  
+}
+.footer nav ul{ 
+    
+    position: relative;
+    width: 100%;
+    height: 60px; 
+    overflow: hidden;
+    left: calc(50% - 25%); 
+}
+.footer nav ul li{
+    width: 10%;  
+    float: left; 
+    position: relative; 
+    bottom: -10px;
+} 
+.footer nav ul li a{
+    position: relative;
+    width: 41px;
+    height: 42px;
+    padding: 7px;
+    border-radius: 50%;
+    left: calc(50% - 25%); 
+    background-color: #19ce60;   
+    display: block;
+}
+.footer nav ul li a img{ 
+    transition: 0.5s;
+}
+.footer nav ul li:nth-child(1) a{
+    background-color: #19ce60;   
+}
+.footer nav ul li:nth-child(2) a{
+    background-color: #174c89;   
+}
+.footer nav ul li:nth-child(3) a{
+    background-color: #e60000;   
+}
+.footer nav ul li:nth-child(4) a{
+     background: url(../img/sns_ico_04_back.png);
+}
+.footer nav ul li:nth-child(5) a{
+    background-color: #19ce60;   
+} 
+.footer nav ul li:nth-child(1) a:hover img { 
+    transform: rotate(30deg);
+    transition: 0.5s;
+}
+.footer nav ul li:nth-child(2) a:hover img { 
+    transform: rotate(-30deg);
+    transition: 0.5s;
+}
+.footer nav ul li:nth-child(3) a:hover img { 
+    transform: rotate(30deg);
+    transition: 0.5s;
+}
+.footer nav ul li:nth-child(4) a:hover img { 
+    transform: rotate(-30deg);
+    transition: 0.5s;
+}
+.footer nav ul li:nth-child(5) a:hover img { 
+    transform: rotate(30deg);
+    transition: 0.5s;
+}
+.footer nav ul li a img{ 
+    position: absolute;
+    background-size: no-repeat cover;  
+}
+.footer nav ol li{
+    width: 20%;
+    /* border: 2px solid gray;  */
+    
+    float: left; 
+     
+} 
+.footer .bottom_footer {
+    
+}
+.footer .bottom_footer div{
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    background: url(../img/footer_logo.png)no-repeat;
+    border: 2px solid gray; 
+}
+.footer .bottom_footer p{
+    font-size: 12px;
+    /* border: 2px solid gray;  */
+}
+
+
+/********* 반응형 *********/
+         /* 반응형 스타일*/    
+         @media (min-width: 576.99px) { /*해상도 : 스마트폰 세로 제일 작은거*/
+            .bottom_menu1{
+                display: block;
+            }
+            
+            
+        }
+        @media (min-width: 500px) { /*해상도 : 스마트폰 세로*/
+            .bottom_menu1{
+                display: block;
+                
+            }
+        }
+        @media (min-width: 768px) { /*해상도 : 스마트폰 가로*/
+            .bottom_menu1{
+                display: block;
+            }
+            
+        }
+        @media (min-width: 992px) { /*해상도 : 타블랫 사이즈*/
+            .bottom_menu1{
+                display: block; 
+            }
+            .footer nav ul{
+                width: 55px;
+                height: 260px;
+                position: fixed;
+                bottom: 300px;  
+                left: 0%;
+                border-radius: 0 10px 10px 0;
+                background-color: aliceblue; 
+                z-index: 80;
+            }
+            .footer nav ul li{
+                float: none;
+                margin: 5px;
+            }
+            
+        }
+        @media (min-width: 1200px) { /*해상도 : 데스크탑 사이즈*/
+            .bottom_menu1{
+                display: block;  
+            }
+            .footer nav ul{
+                width: 55px;
+                height: 260px;
+                position: fixed;
+                bottom: 300px;  
+                left: 0%;
+                border-radius: 0 10px 10px 0;
+                background-color: aliceblue; 
+                z-index: 80;
+            }
+            .footer nav ul li{
+                float: none;
+                margin: 5px;
+            }
+            
+        }

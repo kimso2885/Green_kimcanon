@@ -1,0 +1,804 @@
+/* reset css */
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+:root{
+    --orange-color:#f6ca00 ;
+ }
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li,ol li{
+    list-style: none;
+}
+a{
+    text-decoration: none
+}
+body{
+    font-family: NanumSquare, sans-serif;
+    background-color: #eeecec;
+}
+#wrapper{
+    width: 100%;
+
+}
+.center{
+    left: calc(50% - 450px);
+}
+.bo{ 
+}
+/* 로그인 */
+#wrapper>p#login{
+    width: 900px;
+    position: absolute;
+    left: calc(50% - 450px);
+    font-size: 0.8em;
+    top: 5px;
+    color:black;
+    z-index: 999;
+ }
+ #wrapper>p#login span{
+     float: right;
+     margin: 0 10px;
+     line-height: 20px;
+ }
+ #wrapper>p#login span span{
+     text-indent: -9999px;
+ }
+ #wrapper>p#login span a{
+     margin:0 5px;
+     color:white;
+     font-weight: 800;
+ }
+ #wrapper>p#login span::before{
+     content: "|";
+     margin-right:15px;
+     color:white
+ }
+ #wrapper>p#login span:last-child:before{
+     content:none
+ }
+
+/* desktopLnbWhite 데스크탑일 때 화이트 네비 스타일 */
+nav#desktopLnbWhite{
+    background-color: white;
+    width: 900px;
+    position: absolute;
+    left: calc(50% - 450px);
+    top: 30px;
+    height: 80px;
+    z-index: 9999;
+    /* padding: 30px; */
+    /* box-sizing: border-box; */
+}
+nav#desktopLnbWhite a{
+    font-weight: 800;
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-size: 0.9em;
+    color:black;
+}
+nav#desktopLnbWhite ul{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+nav#desktopLnbWhite li{
+    float: left;
+    width: 11.11%;
+    position: relative;
+    /* border:1px solid red; */
+    box-sizing: border-box;
+    height: 100%;
+    line-height: 80px; 
+}
+/* 상단 화이트 네비 호버시 스타일 */
+nav#desktopLnbWhite li:hover a{
+    color:var(--orange-color);
+}
+nav#desktopLnbWhite li::after{
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: var(--orange-color);
+    position: absolute;
+    bottom: 0;
+    transition: transform 1s;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+nav#desktopLnbWhite li:hover::after{
+    transform: scaleX(1);
+}
+nav#desktopLnbWhite li:nth-child(1)::after,
+nav#desktopLnbWhite li:nth-child(2)::after{
+    content: none;
+}
+nav#desktopLnbWhite li:first-child h1{
+    text-indent: -9999px;
+    width: 130%;
+    height: 100%;
+    background: url(../img/h1_logo.png) no-repeat 20px center/80%;
+}
+
+/* 메인 상단 캐로셀 */
+section#brand{
+    width: 100%;
+    height: 580px;
+    position: relative;
+    top: 0;
+}
+section#brand.carousel ul.gallery, section#brand.carousel ul.gallery li{
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+} 
+section#brand.carousel ul.gallery li:nth-child(1){
+    background: url(../img/carousel_01.jpg) center;
+}
+section#brand.carousel ul.gallery li:nth-child(2){
+    background: url(../img/carousel_02.jpg) center;
+}
+section#brand.carousel ul.gallery li:nth-child(3){
+    background: url(../img/carousel_03.jpg) center;
+}
+section#brand.carousel ul.gallery li:nth-child(4){
+    background: url(../img/carousel_04.jpg) center;
+}
+section#brand.carousel ul.gallery li:nth-child(5){
+    background: url(../img/carousel_05.jpg) center;
+}
+section#brand.carousel ul.gallery li:nth-child(6){
+    background: url(../img/carousel_06.jpg) center;
+}
+/* 상단 캐로셀 버튼 */
+section#brand.carousel ul.carousel_btn{
+    position: absolute;
+    z-index: 999;
+    width: 400px;
+    left: 50%;
+    margin-left: -400px;
+    bottom: 7px;
+}
+section#brand.carousel ul.carousel_btn li{
+    float: left;
+    width: 53px;
+    height: 3px;
+    background-color: #cfc6bc;
+    margin: 0 2px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+section#brand.carousel ul.carousel_btn li:last-child{
+    height: 53px;
+    background: url(../img/icon_play.png) no-repeat 0/200%;
+    position: relative;
+    top: -26.5px;
+}
+/* cf 비디오 영역 */
+section#cf{
+    position: relative;
+    z-index: 99999;
+    width: 900px;
+    /* height: 506.25px; */
+    top: 50px;
+    left: calc(50% - 450px);
+} 
+
+/* #menu인 세번째 컨텐츠 한솥메뉴 */
+section#menu{
+    width: 900px;
+    height: 470px;
+    position: relative; 
+    margin: 100px auto;
+}
+section#menu .content{
+    width: 48%;
+    height: 100%;
+    border: 1px solid blue;
+    float: left;
+    margin: 0 1%;
+    cursor: pointer;
+    border-bottom: 5px solid darkgray;
+}
+section#menu .content::before{
+    content:"";
+    display: inline-block;
+    width: 48%;
+    height: 5px;
+    background-color:var(--orange-color);
+    position: absolute;
+    bottom:0;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+
+}
+section#menu .content:hover::before{
+    transform: scaleX(1);
+    transform-origin: center;
+}
+section#menu .content .img{
+    width: 100%;
+    height: 302px;
+    background: url(../img/main_img_01.jpg) no-repeat center;
+}
+section#menu .content:nth-of-type(2) .img{
+    width: 100%;
+    height: 302px;
+    background: url(../img/main_img_02.jpg) no-repeat center;
+}
+section#menu .content p{
+    padding: 20px;
+    font-weight: 700;
+}
+.play_btn{
+    background: url(../img/btn_link.png) no-repeat 0/200%;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin: -5px 20px;
+    transition: background-position 1s;
+}
+.content:hover{
+    border-bottom: 5px solid var(--orange-color);
+}
+.content:hover .play_btn{
+    background-position: 100%;
+}
+
+/* #menu인 네번째 컨텐츠 한솥메뉴 */
+section#story{
+    position: relative;
+    top: -50px; 
+    width: 900px;
+    overflow: hidden;
+}
+section#story .content{
+    width: 33.333%;
+    background-color: lightgray;
+    float: left;
+    margin: 0 1%;
+    height: 360px; 
+}
+
+section#story .content:nth-child(1){
+    border-bottom: none;
+}
+
+section#story .content:nth-child(1) h2{
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 40px 10px;
+}
+section#story .content:nth-child(1) h2::after{
+    content: "";
+    width: 15%;
+    height: 5px;
+    background-color: black;
+    display: block;
+    margin-top: 30px;
+}
+section#story .content:nth-child(1) p{
+    font-size: 0.8em; 
+}
+section#story .content h3{
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 15px;
+}
+
+section#story .content:nth-child(1){
+    width: 27%;
+    background-color: var(--orange-color);
+}
+section#story .content:nth-child(2) .img{ 
+    background:  url(../img/main_img_03.jpg) no-repeat center;
+    background-size: 100%;
+    padding: 30%;
+    margin-bottom: 15px;
+}
+section#story .content:nth-child(3) .img{ 
+    background:  url(../img/main_img_04.jpg) no-repeat center;
+    background-size: 100%;
+    padding: 30%;
+    margin-bottom: 15px;
+}
+/*section#philosophy*/
+
+section#philosophy{
+    width: 100%;
+    height: 540px; 
+    position: relative;
+    overflow: hidden;
+}
+section#philosophy .bg{
+    width: 100%;
+    height: 100%;
+    background: url(../img/main_visual_02.jpg) no-repeat center;
+    transition:  transform 3s;
+}
+section#philosophy .bg:hover{/*kim*/
+    transform: scale(1.1);
+
+}
+section#philosophy .content{
+    width: 320px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.877);
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    color: white;
+    padding: 80px 30px; 
+}
+section#philosophy .content h1, section#ingredient .content h1{
+    font-size: 1.6em;
+    font-weight: 700; 
+}
+section#philosophy .content h1::after,section#ingredient .content h1::after{
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 30px 0;
+}
+section#philosophy .content p ,section#ingredient .content p{
+    font-size: 0.8em;
+    line-height: 1.2em;
+}
+section#philosophy .content .btn{
+    color: white;
+    border: 1px solid white;
+    border-radius: 0;
+    font-size: 0.8em;
+    padding: 10px 55px;
+    position: absolute;
+    bottom: 100px;
+}
+section#philosophy .content .btn:hover{
+    background-color: white;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+
+section#ingredient{
+    width: 900px;
+    height: 440px;  
+    position: relative;
+    margin: 50px auto;    
+}
+section#ingredient .bg{
+    width: 100%;
+    height: 100%;
+    background: url(../img/main_img_05.jpg) no-repeat 0 center;
+}
+section#ingredient .content{
+    width: 300px;
+    height: 100%;
+    background-color: #cfc6bc;
+    position: absolute;
+    top: 0;
+    right: 0;  
+    padding:80px 30px;
+    border-bottom:3px solid rgb(55, 54, 54);
+}
+section#ingredient .content::after{
+    content: "";
+    display: block;
+    border:3px solid var(--orange-color);
+    position:absolute;
+    bottom:-3px;
+    z-index: 999;
+    width: 100%;
+    left:0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 1s;
+}
+section#ingredient:hover .content::after{
+    border-color:var(--orange-color);
+    transform: scaleX(1);
+}
+section#ingredient .content h1::after{
+    background-color: rgba(55, 55, 55, 1);
+}
+section#ingredient .content div{
+    position: relative;
+    left:-20px;
+    top:40px;
+}
+section#ingredient .content div span+span{
+    position:relative;
+    left: -20px;
+}
+/*section#more*/
+section#more{
+    width: 900px;
+    height: 350px; 
+    margin: 0 auto;
+    position: relative;
+}
+section#more>p{
+    width: 100%;
+    font-size: 1.6em;
+    font-weight: 900;
+    position: relative;
+}
+section#more>p span+span{
+    display: inline-block;
+    width: 80%;
+    height: 20px;
+    background-color: black;
+    right: 0;
+    position: absolute;
+    top: 7px;
+}
+section#more .content{
+    width: 32%;
+    height: 245px;
+    float: left;
+    position: relative;
+}
+section#more .content .bg{
+    position: relative;
+}
+section#more .content:nth-child(2){
+    margin: 0 2%;
+}
+section#more .content:nth-child(2) .bg{
+    width: 100%;
+    height: 100%;
+    background: url(../img/more_hansot.jpg) no-repeat center; 
+}
+section#more .content:nth-child(3) .bg{
+    width: 100%;
+    height: 100%;
+    background: url(../img/more_event.jpg) no-repeat center; 
+}
+section#more .content:nth-child(4) .bg{
+    width: 100%;
+    height: 100%;
+    background: url(../img/more_news.jpg) no-repeat center; 
+}
+section#more .content .bg p{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+    color: white;
+    box-sizing: border-box;
+    padding: 17px;
+}
+section#more .content .bg p::after{
+    content: ">";
+    font-weight: 900;
+    position: absolute;
+    right: 10;
+}
+/*foooter*/
+#footer{
+    position: relative;
+    width: 100%;
+    background-color: var(--orange-color);
+    margin-top: 50px;
+    padding: 40px;
+    text-align: center;
+    height: 700px;
+}
+#footer .desktop{
+   width: 900px;
+   position: relative;
+   margin: 0 auto;
+}
+#footer .desktop ul.info{
+    width: 80%;
+    
+    
+    overflow: hidden;
+    position: absolute;
+    left: 45%;
+    margin-left: -300px;
+}
+#footer .desktop ul.info li{
+    float: left;
+    width: 12.5%;
+    font-size: 0.9em;
+
+}
+#footer .desktop ul.info li:nth-child(2),#footer .desktop ul.info li:nth-child(5){
+    width: 25%;
+}
+#footer .desktop ul.info li::before{
+    content: "|";
+    margin-right: 25%;
+
+}
+#footer .desktop ul.info li:first-child:before{
+    content: none;
+}
+#footer .desktop ul.info li a{
+    color: black;
+    font-weight: 900;
+}
+#footer .desktop hr{
+    position: relative;
+    top: 20px;
+}
+#footer .desktop .logo{
+    width: 200px;
+    height: 10px;
+    background: url(../img/icon_cont_more.png)no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+}
+#footer .desktop p{
+    position: relative;
+    top: 30px;
+    font-size: 0.8em;
+    line-height: 0.8em;
+}
+#footer .desktop .sns{
+    position: relative;
+    top: 50px;
+
+}
+#footer .desktop .sns a{
+    text-indent: -9999;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background:  url(../img/icon_sns_02.png);
+    background-size: 80px;
+    margin: 5px;
+}
+#footer .desktop .sns a:nth-child(2){
+    background-position: 40px;
+}
+#footer .smartphone{
+    
+   width: 100%;
+   position: relative;
+   margin: 0 auto;
+   background-color: var(--orange-color);
+}
+#footer .smartphone{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************************** 반응형 **********************************/
+
+@media (min-width: 1200px) { /*데스크탑 일때 */
+
+
+
+  }
+
+@media (max-width: 1199px) { /*데스크탑 미만일때*/
+    nav#desktopLnbWhite{
+        display: none;
+    }
+    nav#moblieLnb{
+        width: 100%;
+        height: 60px;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        z-index: 9999;
+    }
+    nav#moblieLnb .menBar a:first-child{
+        text-indent: -9999px;
+        /* border: 1px solid red; */
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: url(../img/m_h1_logo.png)no-repeat center / contain;
+        top: 15px;
+        left: 15px;
+    }
+    nav#moblieLnb .menBar a:last-child{
+        position: absolute;
+        display: block;
+        right: 10px;
+        top: 10px;
+        font-size: 1.7em;
+
+    }
+    nav#moblieLnb .moblieMenBar{
+        display: none;
+        width: 100%;
+        background-color: white;
+        height: 100vh;
+        padding: 50px;
+    }
+    nav#moblieLnb .moblieMenBar a.xBtn{
+        font-size: 1.5em;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+    nav#moblieLnb .moblieMenBar li{
+        margin: 25px 0;
+    }
+    nav#moblieLnb .moblieMenBar li a{
+        font-weight: 700;
+        color: black;
+    }
+    nav#moblieLnb .moblieMenBar li:hover a{
+        color: var(--orange-color);
+    }
+    input#check:checked~.moblieMenBar{
+        display: block; 
+    }
+    input#check:checked+.menBar{
+        display: none; 
+    }
+
+
+
+  }
+@media (max-width: 900px) { /*컨탠츠의 가로가 꽉차는 순간*/
+
+    html,body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    section#brand.carousel{
+        height: 340px;
+    }
+    section#brand.carousel ul.gallery, section#brand.carousel ul.gallery li{
+    background-size: cover !important;
+    }
+    section#brand.carousel ul.carousel_btn{
+        left: 10px;
+        margin-left: 0;
+        bottom: -25px !important; 
+    }
+    nav#desktopLnbWhite{
+        display: none;
+    }
+    section#cf, section#menu, section#story{
+        width: 100%;
+        left: 0;
+    }  
+    section#menu .content .img{
+        background-size: 100%;
+        background-position: center top;
+    }
+    section#philosophy .content{
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        left: 5%;
+        top: 5%;
+    }
+    section#philosophy .content p{
+        width: 300px;
+    }
+    section#philosophy .content .btn{
+        bottom: 50px;
+    }
+    section#ingredient{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        height: 310px;
+    }
+    section#ingredient .content p{
+        background-size: cover;
+    }
+    section#ingredient .content{
+        width: 100%;
+        position: relative;
+        top: 0;
+        padding: 30px 20px;
+        height: 360px; 
+    }
+    section#ingredient .content:hover{
+        border-bottom: 3px solid var(--orange-color);
+    }
+    section#ingredient .content::after{
+        content: none;
+    }
+    /* 성분 스타일 */
+    section#ingredient{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        /* height: 310px; */
+        height: 700px;
+    }
+    section#ingredient .bg{
+        background-size: cover;
+        height: 310px;
+    }
+    section#ingredient .content{
+    width: 100%;
+    position: relative;
+    top:0;
+    padding:30px 20px;
+    height: 365px;
+    }
+    section#ingredient .content:hover{
+        border-bottom: 3px solid var(--orange-color);
+    }
+    section#ingredient .content::after{
+        content: none;
+    }
+  }
+
+@media (max-width: 767px) { /*스마트폰 일때*/
+    section#cf{
+        /* height: 420px; */
+    } 
+    section#story .content:nth-child(1){
+        width: 98%;
+        height: 250px; 
+        margin-left: 1%;
+    }
+
+    section#story .content{
+        width: 48%; 
+        margin-top: 2%;
+    }
+    
+  }
+
+
+
